@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Changes"
+  short_description: "Draft conventional commits with body"
+  default_prompt: "Use $commit-changes to review my staged changes and create a conventional commit with a descriptive body."
