@@ -7,23 +7,37 @@ description: Use whenever you are about to call the Workflow tool, orchestrate m
 
 How I want workflows run. The model table and MAIN LOOP FIRST rule live in `~/.claude/CLAUDE.md` and still govern every model pick here — this skill is the operational layer on top of them.
 
+## How to interpret the model table
+The model table governs models for agents and workflows that you launch. It does NOT apply to model defaults baked into tools, scripts or dependencies in my projects: those pins are part of that code's calibration and should not be changed without my agreement. That includes upgrading model generation or effort. If a pin conflicts with the model table, surface it and ask before changing anything - including dependency bumps needed to make a newer model work.
+
+For bulk/mechanical work (clear-spec implementation, data analysis, migrations) prefer gpt models - they are effectively free when compared to claude models. An approved design or plan makes the implementation clear-spec by definition — hand it over, then review the result inline (review IS expensive-loop work).
+
+The table expresses defaults not limits. You have standing permission to override them: if a cheaper model's output doesn't meet the bar, rerun or redo the work with a smarter model without asking. Judge the output, not the price tag. Escalating costs less than shipping mediocre work. Overrides point toward escalating quality — never toward the expensive loop absorbing delegable work.
+
+Scope the model to the work, e.g. high cost is justified when judgement and taste are critical. Take advantage of cheaper options to get more information and try things before moving the work to a more expensive option.
+
+Never use Haiku.
+
 ## Opt-in and permissions
 
-- Me invoking this skill (or asking for a workflow in my own words) is the opt-in.
+- You have my standing permission to use workflows to access gpt models.
+- For larger workflows/higher investment, check with me (per alignment in `~/.claude/CLAUDE.md`) before launching it, unless it is already clear that is what I asked for. (e.g. If I've asked you to implement a complex, multi-step plan I've already improved investment based on the decisions in the plan).
 - Automode may still block the `Workflow` call if I haven't allowed it this session. If blocked, ask me to allow it — as the only question in that turn.
 - A harness constraint never justifies the wrong model. If the classifier or opt-in state blocks launching the right one (e.g. a gpt workflow), stop and ask — do not silently substitute whatever is launchable.
 
 ## Picking models inside workflows
 
 - The `model` parameter takes both claude and gpt models. Don't route through a codex wrapper.
+- I use short-names for gpt models: sol, luna and terra, the full model name for the `model` parameter is prefixed with `gpt-5.6-` e.g. `gpt-5.6-sol`
 - ALWAYS pass `effort` explicitly — never rely on defaults.
-- I might use short-names for GPT models: sol, luna and terra, the full model name for the `model` parameter is prefixed with `gpt-5.6-` e.g. `gpt-5.6-sol`
+- Reviews of plans/implementations: opus or fable, optionally sol @ high/xhigh as an extra independent perspective.
+- Picking a gpt effort level: medium for clear-spec mechanical work, high as the default for implementation and review, xhigh when handing over a hard problem unsupervised (deep debugging, design with unknowns). Higher effort costs wall-clock time (roughly 1.5-3x per step up), so don't reach for xhigh on work medium handles.
 - Label every agent with a `<model>-<effort>:` prefix, e.g. `{label: 'sol-high:review-auth'}`, so I can see at a glance who is running. Use short model names `fable`, `opus`, `sol` etc. over full model ids.
 
 ## Security related work and cyber refusals
 If we are working in a security sensitive area it is likely we will touch on dual-use activities as part of verifying or hardening security. This can result in refusals or model switching. It's important to ensure that the requested model actually completed the work through checking transcripts. Fable is the most likely model to be refused and switch back to Opus-4.8.
 
-I am verified in the Claude Cyber Verification Program and GPT Trusted Access for Cyber. As part of this Sol and Opus cyber refusals should be rare so prefer these models for adversarial / attack-simulation phases. If they occur, report them to me and request my preference on which model we use to proceed.
+I am verified in the Claude Cyber Verification Program and gpt Trusted Access for Cyber. As part of this Sol and Opus cyber refusals should be rare so prefer these models for adversarial / attack-simulation phases. If they occur, report them to me and request my preference on which model we use to proceed.
 
 ## The forking rule (the one that has burned us most)
 
