@@ -5,7 +5,7 @@ description: Use whenever you are about to call the Workflow tool, orchestrate m
 
 # Using workflows
 
-How I want workflows run. The model table and MAIN LOOP FIRST rule live in `~/.claude/CLAUDE.md` and still govern every model pick here — this skill is the operational layer on top of them.
+How I want workflows run. The model table and Main Loop rule live in the "My calibration of models" section of `~/.claude/CLAUDE.md` and still govern every model pick here — this skill is the operational layer on top of them.
 
 ## How to interpret the model table
 The model table governs models for agents and workflows that you launch. It does NOT apply to model defaults baked into tools, scripts or dependencies in my projects: those pins are part of that code's calibration and should not be changed without my agreement. That includes upgrading model generation or effort. If a pin conflicts with the model table, surface it and ask before changing anything - including dependency bumps needed to make a newer model work.
@@ -21,7 +21,7 @@ Never use Haiku.
 ## Opt-in and permissions
 
 - You have my standing permission to use workflows to access gpt models.
-- For larger workflows/higher investment, check with me (per alignment in `~/.claude/CLAUDE.md`) before launching it, unless it is already clear that is what I asked for. (e.g. If I've asked you to implement a complex, multi-step plan I've already improved investment based on the decisions in the plan).
+- For larger workflows/higher investment, check with me (per alignment in `~/.claude/CLAUDE.md`) before launching it, unless it is already clear that is what I asked for. (e.g. If I've asked you to implement a complex, multi-step plan I've already approved investment based on the decisions in the plan).
 - Automode may still block the `Workflow` call if I haven't allowed it this session. If blocked, ask me to allow it — as the only question in that turn.
 - A harness constraint never justifies the wrong model. If the classifier or opt-in state blocks launching the right one (e.g. a gpt workflow), stop and ask — do not silently substitute whatever is launchable.
 
