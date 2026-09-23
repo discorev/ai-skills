@@ -12,11 +12,7 @@ How I want workflows run. The model table and Main Loop rule live in the "My cal
 ## How to interpret the model table
 The model table governs models for agents and workflows that you launch. It does NOT apply to model defaults baked into tools, scripts or dependencies in my projects: those pins are part of that code's calibration and should not be changed without my agreement. That includes upgrading model generation or effort. If a pin conflicts with the model table, surface it and ask before changing anything - including dependency bumps needed to make a newer model work.
 
-For bulk/mechanical work (clear-spec implementation, data analysis, migrations) prefer gpt models - they are effectively free when compared to claude models. An approved design or plan makes the implementation clear-spec by definition: hand it over, then review the result inline (review IS expensive-loop work).
-
 The table expresses defaults not limits. You have standing permission to override them: if a cheaper model's output doesn't meet the bar, rerun or redo the work with a smarter model without asking. Judge the output, not the price tag. Escalating costs less than shipping mediocre work. Overrides point toward escalating quality, never toward the expensive loop absorbing delegable work.
-
-Scope the model to the work, e.g. high cost is justified when judgement and taste are critical. Take advantage of cheaper options to get more information and try things before moving the work to a more expensive option.
 
 Never use Haiku.
 
@@ -30,10 +26,9 @@ Never use Haiku.
 ## Picking models inside workflows
 
 - The `model` parameter takes both claude and gpt models. Don't route through a codex wrapper.
-- I use short-names for gpt models: sol, luna and terra, the full model name for the `model` parameter is prefixed with `gpt-5.6-` e.g. `gpt-5.6-sol`
 - ALWAYS pass `effort` explicitly; never rely on defaults.
 - Reviews of plans/implementations: opus or fable, optionally sol @ high/xhigh as an extra independent perspective.
-- Picking a gpt effort level: medium for clear-spec mechanical work, high as the default for implementation and review, xhigh when handing over a hard problem unsupervised (deep debugging, design with unknowns). Higher effort costs wall-clock time (roughly 1.5-3x per step up), so don't reach for xhigh on work medium handles.
+- Higher effort costs wall-clock time (roughly 1.5-3x per step up), so don't reach for xhigh on work medium handles.
 - Label every agent with a `<model>-<effort>:` prefix, e.g. `{label: 'sol-high:review-auth'}`, so I can see at a glance who is running. Use short model names `fable`, `opus`, `sol` etc. over full model ids.
 
 ## Security related work and cyber refusals
