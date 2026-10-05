@@ -1,6 +1,8 @@
 ---
 name: using-workflows
 description: Use whenever you are about to call the Workflow tool, orchestrate multi-agent work, launch gpt models as subagents, or steer/resume/debug a running workflow. Also invoke when an unexpected agent appears mid-session or a workflow seems stuck. Invoking this skill on my request counts as my explicit opt-in to run a workflow.
+metadata:
+  harness: [claude-code]
 ---
 
 # Using workflows
