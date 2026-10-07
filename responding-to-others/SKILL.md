@@ -54,3 +54,7 @@ Ollie
 ```
 
 The `🤖 Drafted with AI assistance.` should be kept understated: italicise it and, when rich-text formatting is available, use a smaller font and muted grey colour. Include it once in each new reply, outside the quoted email history.
+
+# Verify formatting before sending
+
+When sending or editing a formatted message and a preview option is available, visually inspect it in the destination application or tool before submission. Check that paragraphs have not been collapsed, emphasis has survived and the disclosure is formatted as expected. Accessibility text alone does not establish that the formatting is correctly applied and rendered. After sending or saving an edit, visually verify the rendered result where available.
