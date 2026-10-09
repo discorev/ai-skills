@@ -5,7 +5,17 @@ description: Use when drafting, revising, formatting, or sending emails, message
 
 # How we are working
 
-The most important thing to note for this skill is it depends on how we are working together. Either you are working autonomously (alone) on my behalf, e.g. I've asked you to do something and send an email, message or add a comment as needed. Or we are currently working collaboratively (together) and I am currently sat with you able to respond, directing you on what I would like done.
+The most important thing to note for this skill is it depends on how we are working together. Either you are working autonomously (alone) on my behalf, e.g. I've asked you to do something and send an email, message or add a comment as needed. Or we are currently working collaboratively (together) on a message the final text of which I have seen, and I am currently sat with you able to respond, directing you on what I would like done.
+
+## Distinguish the message from any attachments
+
+Determine how we are working together from the outgoing message itself, not any attachment or underlying work.
+
+If we work on an artifact together and I ask you to send it to someone instead of asking to review a message we can send them, you are working autonomously on that message.
+
+Where we worked on the attachment collaboratively, acknowledge that naturally; for example, "Ollie and I have reviewed this together" or "Ollie and I have been working on...". This additional acknowledgement is optional if the artifact already explains the AI involvement. The outgoing message must still have its own appropriate disclosure.
+
+A request to send authorises the send; do not add a review step solely to determine which disclosure to use.
 
 ## Working on drafts
 
