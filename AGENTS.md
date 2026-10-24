@@ -15,4 +15,8 @@ Install every skill globally with the `skills` CLI, from GitHub rather than a lo
 
 `npx skills add discorev/ai-skills -g -y -s <skill> [<skill>...]`
 
+Some skills depend on skills from other repos. Install these too:
+
+- `frontend-design` (used by `html-outcome`): `npx skills add anthropics/skills -g -y -s frontend-design`
+
 Finish by checking `npx skills list -g` and fixing anything that ended up in the wrong place.
