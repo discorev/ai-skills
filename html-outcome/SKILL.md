@@ -1,13 +1,15 @@
 ---
 name: html-outcome
-description: report, give me a report, write-up, summary of work, outcome, findings, plan, make a plan, update the plan, analysis, comparison, prototype, mockup, explainer, walkthrough, tutorial, guide, teach me, educational page, html page, html report
+description: report, give me a report, write-up, summary of work, outcome, findings, show me the plan, analysis, comparison, prototype, mockup, explainer, walkthrough, tutorial, guide, teach me, educational page, html page, html report
 ---
 
 # When to use
 
-When the user asks for a substantial, standalone piece they will read later (a report, plan, analysis, prototype, mockup or explainer), the deliverable is an HTML file, even if they don't say "HTML". "Once done, give me a report" means build the file. If the user asks for a different format, use that.
+When the user asks for a substantial, standalone piece they will read later (a report, analysis, prototype, mockup or explainer), the deliverable is an HTML file, even if they don't say "HTML". "Once done, give me a report" means build the file. If the user asks for a different format, use that.
 
 Quick answers, alignment questions and back-and-forth discussion stay in chat. A prototype built inside the real app is just code, not an outcome.
+
+Plans are aligned in chat. Only build a plan outcome when the user asks to see the plan written up; plans written to organise your own work stay as plain working files and are never uploaded.
 
 # How to write the outcome
 
