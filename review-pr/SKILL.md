@@ -49,13 +49,21 @@ Follow pagination and check for truncated diffs or omitted threads. Fetch source
 
 Confirm the target branch and current source commit, and review the actual PR changes rather than assuming the local checkout matches. Read applicable repository instructions and the PR description.
 
-## 3. Perform an independent code review
+## 3. Review before reading existing commentary
 
 Review the code within the requested scope and record your findings before reading existing PR commentary or reviews.
 
+### Council review
+
+Review it yourself by default. When the user asks for a council or names reviewer models, run a council instead of reviewing yourself. Use the reviewers the user names, otherwise the review defaults in the user's instructions, otherwise your own model plus a strong model from a different provider. Run them in parallel on the same brief: the PR diff at the resolved source commit, the PR description, applicable repository instructions and the requested scope. Ask each for findings as id, severity, file:line and claim. Launch them with the harness's native Agent or Workflow tools, following the `using-workflows` skill where it is installed. If a named reviewer can't be launched, report the blocker; never substitute another model.
+
+Tell reviewers they are read-only: no edits, commits, pushes, PR comments or subagents. Don't give them existing PR commentary. Run a single round; there is no fix loop.
+
+Merge their findings into one ledger, prefixing ids per reviewer (A1, S1). Check each finding and its severity against the code yourself; drop or downgrade what doesn't hold up, and note which reviewers raised each finding you keep.
+
 ## 4. Enrich feedback with existing PR commentary and reviews
 
-After the independent review, read existing PR commentary and reviews, including replies and resolution state, and compare them with your findings. Use them to enrich the review feedback: distinguish newly identified issues from those already raised, and include the reviewer and discussion link where useful.
+After recording your findings, read existing PR commentary and reviews, including replies and resolution state, and compare them with your findings. Use them to enrich the review feedback: distinguish newly identified issues from those already raised, and include the reviewer and discussion link where useful.
 
 Check existing findings against the current code before treating them as still applicable. Explain when an issue has been fixed, reintroduced, or appears mistaken. Existing coverage does not remove a relevant finding from the report to the user; deduplication applies only to comments posted to the PR.
 
